@@ -1,0 +1,133 @@
+Skenario Pengujian (Unit Test)
+
+
+SplashViewModelTest
+Ketika Berhasil Mendapatkan Token
+Memastikan bahwa nilai actual tidak null pada method splashViewModel.getAuthToken()
+Memastikan bahwa nilai actual sama dengan dummyAuthToken pada method splashViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Ketika Berhasil Mendapatkan Token tetapi null
+Memastikan bahwa nilai actual null pada method splashViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+
+SignupViewModelTest
+Ketika Berhasil SignUp
+Memastikan mengembalikan Result.isSuccess jika nilai-nya true
+Memastikan mengembalikan Result.isFailure jika nilai-nya false
+Memastikan bahwa actual tidak null pada Result.onSuccess
+Memastikan bahwa actual sama dengan dummySignUp pada Result.onSuccess
+Memastikan bahwa method authRepository.signUpUser() telah dipanggil
+Ketika Gagal SignUp
+Memastikan mengembalikan Result.isSuccess jika nilai-nya false
+Memastikan mengembalikan Result.isFailure jika nilai-nya true
+Memastikan bahwa exceptioh pada Result.onFailure tidak null
+
+LoginViewModelTest
+Ketika Berhasil Login
+Memastikan mengembalikan Result.isSuccess jika nilai-nya true
+Memastikan mengembalikan Result.isFailure jika nilai-nya false
+Memastikan bahwa actual tidak null pada Result.onSuccess
+Memastikan bahwa actual sama dengan dummyLogin pada Result.onSuccess
+Memastikan bahwa method authRepository.loginUser() telah dipanggil
+Ketika Gagal Login
+Memastikan mengembalikan Result.isSuccess jika nilai-nya false
+Memastikan mengembalikan Result.isFailure jika nilai-nya true
+Memastikan bahwa exceptioh pada Result.onFailure tidak null
+Ketika Menyimpan Token
+Memastikan bahwa method authRepository.saveAuthToken telah dipanggil
+Ketika Menyimpan Name User
+Memastikan bahwa method authRepository.saveNameUser telah dipanggil
+
+MainViewModelTest
+Ketika Berhasil Mendapatkan Token
+Memastikan bahwa nilai actual tidak null pada method mainViewModel.getAuthToken()
+Memastikan bahwa nilai actual sama dengan dummyAuthToken pada method mainViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek storyRepository
+Ketika Berhasil Mendapatkan Token tetapi null
+Memastikan bahwa nilai actual null pada method mainViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek storyRepository
+Ketika Berhasil Mendapatkan Seluruh Story
+Memastikan bahwa method storyRepository.getAllStories telah dipanggil
+Memastikan bahwa data story tidak null
+Memastikan bahwa ukuran data asli dengan data dummy
+Ketika Gagal Mendapatkan Seluruh Story
+Memastikan method storyRepository.getAllStories telah dipanggil
+Memastikan bahwa data story tidak null
+Memastikan bahwa ukuran data asli dengan data dummy
+
+AddStoryViewModelTest
+Ketika Berhasil Mendapatkan Token
+Memastikan bahwa nilai actual tidak null pada method addStoryViewModel.getAuthToken()
+Memastikan bahwa nilai actual sama dengan dummyAuthToken pada method addStoryViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek storyRepository
+Ketika Berhasil Mendapatkan Token tetapi null
+Memastikan bahwa nilai actual null pada method addStoryViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek storyRepository
+Ketika Berhasil Mengunggah Story
+Memastikan mengembalikan Result.isSuccess jika nilai-nya true
+Memastikan mengembalikan Result.isFailure jika nilai-nya false
+Memastikan bahwa actual tidak null pada Result.onSuccess
+Memastikan bahwa actual sama dengan dummyUploadResponse pada Result.onSuccess
+Memastikan bahwa method storyRepository.uploadImage() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek authRepository
+Ketika Gagal Mengunggah Story
+Memastikan mengembalikan Result.isSuccess jika nilai-nya false
+Memastikan mengembalikan Result.isFailure jika nilai-nya true
+Memastikan bahwa exceptioh pada Result.onFailure tidak null
+Memastikan bahwa method storyRepository.uploadImage() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek authRepository
+
+MapsViewModelTest
+Ketika Berhasil Mendapatkan Token pada Lokasi
+Memastikan bahwa nilai actual tidak null pada method mapsViewModel.getAuthToken()
+Memastikan bahwa nilai actual sama dengan dummyAuthToken pada method mapsViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek storyRepository
+Ketika Berhasil Mendapatkan Token pada Lokasi tetapi null
+Memastikan bahwa nilai actual null pada method mapsViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek storyRepository
+Ketika Berhasil Mendapatkan Story dengan lokasi
+Memastikan mengembalikan Result.isSuccess jika nilai-nya true
+Memastikan mengembalikan Result.isFailure jika nilai-nya false
+Memastikan bahwa actual tidak null pada Result.onSuccess
+Memastikan bahwa actual sama dengan dummyStoriesResponse pada Result.onSuccess
+Memastikan bahwa method storyRepository.getAllStoriesWithLocation() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek authRepository
+Ketika Gagal Mendapatkan Story dengan lokasi
+Memastikan mengembalikan Result.isSuccess jika nilai-nya false
+Memastikan mengembalikan Result.isFailure jika nilai-nya true
+Memastikan bahwa exceptioh pada Result.onFailure tidak null
+Memastikan bahwa method storyRepository.getAllStoriesWithLocation() telah dipanggil
+Memastikan bahwa tidak ada interaksi pada objek authRepository
+
+ProfileViewModelTest
+Ketika Berhasil Mendapatkan Token
+Memastikan bahwa nilai actual tidak null pada method profileViewModel.getAuthToken()
+Memastikan bahwa nilai actual sama dengan dummyAuthToken pada method profileViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Ketika Berhasil Mendapatkan Token tetapi null
+Memastikan bahwa nilai actual null pada method profileViewModel.getAuthToken()
+Memastikan bahwa method authRepository.getAuthToken() telah dipanggil
+Ketika Berhasil Mendapatkan Name User
+Memastikan bahwa nilai actual tidak null pada method profileViewModel.getNameUser()
+Memastikan bahwa nilai actual sama dengan dummyAuthName pada method profileViewModel.getNameUser()
+Memastikan bahwa method authRepository.getNameUser() telah dipanggil
+Ketika Berhasil Mendapatkan Name User tetapi null
+Memastikan bahwa nilai actual null pada method profileViewModel.getNameUser()
+Memastikan bahwa method authRepository.getNameUser() telah dipanggil
+Ketika Berhasil Menyimpan Token
+Memastikan bahwa method authRepository.saveAuthToken() telah dipanggil
+Ketika Berhasil Menyimpan Name User 
+Memastikan bahwa method authRepository.saveNameUser() telah dipanggil
+
+
+
+
+
+
+

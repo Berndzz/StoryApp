@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:id="@+id/iv_detailUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:transitionName="photo"
+                android:scaleType="matrix"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_detailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:transitionName="name"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_name_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_name_title"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/tv_detailDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:transitionName="description"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_description_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_description_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_description_title"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/tv_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/iv_detailUser"
+                app:layout_constraintTop_toBottomOf="@+id/iv_detailUser" />
+
+            <TextView
+                android:id="@+id/tv_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/description"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_name_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
